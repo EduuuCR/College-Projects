@@ -1,4 +1,4 @@
-Project for college work using Google Colab
+Project from College Works
 
 
 
