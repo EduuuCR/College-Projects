@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ competition.name }}</title>
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+  <h1>{{ competition.name }}</h1>
+  <p>{{ competition.description }}</p>
+  <p>Start Date: {{ competition.start_date }}</p>
+  <p>End Date: {{ competition.end_date }}</p>
+
+  <h2>Entries</h2>
+  <ul>
+    {% for entry in entries %}
+      <li>
+        <img src="{{ entry.image.url }}" alt="{{ entry.title }}" width="150">
+        <h3>{{ entry.title }}</h3>
+        <p>{{ entry.description }}</p>
+        <p>Votes: {{ entry.votes }}</p>
+        <form method="post" action="{% url 'vote_entry' entry.id %}">
+          {% csrf_token %}
+          <button type="submit">Vote</button>
+        </form>
+      </li>
+    {% endfor %}
+  </ul>
+
+  <a href="{% url 'add_entry' competition.id %}">Add New Entry</a>
+</body>
+</html>
