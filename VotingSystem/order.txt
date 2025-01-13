@@ -1,0 +1,29 @@
+myproject/
+├── myproject/
+│   ├── __init__.py
+│   ├── settings.py
+│   ├── urls.py
+│   ├── asgi.py
+│   ├── wsgi.py
+├── voting/
+│   ├── migrations/
+│   │   ├── __init__.py
+│   ├── templates/
+│   │   ├── competition_list.html
+│   │   ├── competition_detail.html
+│   │   ├── add_entry.html
+│   ├── static/
+│   │   ├── css/
+│   │   ├── js/
+│   ├── __init__.py
+│   ├── admin.py
+│   ├── apps.py
+│   ├── models.py
+│   ├── tests.py
+│   ├── urls.py
+│   ├── views.py
+├── media/
+│   ├── entries/  # Uploaded files
+├── manage.py
+├── requirements.txt
+├── .gitignore
