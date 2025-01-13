@@ -1,0 +1,7 @@
+Types of Images: Miscellaneous uploads by users or administrators.
+Recommended Formats:
+JPEG: For general image uploads.
+PNG: If transparency is required.
+Examples:
+Files attached to comments or reviews.
+Documents converted to images (e.g., receipts).
