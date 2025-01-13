@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{% block title %}Voting System{% endblock %}</title>
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>Voting System</h1>
+      <nav>
+        <ul>
+          <li><a href="{% url 'competition_list' %}">Home</a></li>
+          {% if user.is_authenticated %}
+            <li><a href="{% url 'admin:index' %}">Admin</a></li>
+            <li><a href="{% url 'logout' %}">Logout</a></li>
+          {% else %}
+            <li><a href="{% url 'login' %}">Login</a></li>
+            <li><a href="{% url 'signup' %}">Sign Up</a></li>
+          {% endif %}
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    {% block content %}
+    <!-- Page-specific content will be injected here -->
+    {% endblock %}
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 Voting System. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>
