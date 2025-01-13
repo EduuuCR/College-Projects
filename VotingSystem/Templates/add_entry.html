@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Add Entry</title>
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+  <h1>Add Entry to {{ competition.name }}</h1>
+  <form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    <label for="title">Title:</label><br>
+    <input type="text" id="title" name="title" required><br><br>
+    
+    <label for="description">Description:</label><br>
+    <textarea id="description" name="description" required></textarea><br><br>
+    
+    <label for="image">Image:</label><br>
+    <input type="file" id="image" name="image" required><br><br>
+    
+    <button type="submit">Submit Entry</button>
+  </form>
+</body>
+</html>
