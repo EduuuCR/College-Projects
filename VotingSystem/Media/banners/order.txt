@@ -1,0 +1,9 @@
+Types of Images: Marketing banners or promotional images.
+Recommended Formats:
+JPEG: For standard banners.
+PNG: For banners with transparency or detailed designs.
+WebP: For better performance and reduced size in modern browsers.
+Examples:
+Homepage carousel banners.
+Promotional images for competitions.
+Announcements or event posters.
