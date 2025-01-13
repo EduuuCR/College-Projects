@@ -9,12 +9,13 @@ myproject/
 │   ├── migrations/
 │   │   ├── __init__.py
 │   ├── templates/
+│   │   ├── base.html
 │   │   ├── competition_list.html
 │   │   ├── competition_detail.html
 │   │   ├── add_entry.html
 │   ├── static/
 │   │   ├── css/
-│   │   ├── js/
+│   │   │   ├── style.css
 │   ├── __init__.py
 │   ├── admin.py
 │   ├── apps.py
@@ -23,7 +24,8 @@ myproject/
 │   ├── urls.py
 │   ├── views.py
 ├── media/
-│   ├── entries/  # Uploaded files
+│   ├── entries/  # Uploaded images
 ├── manage.py
 ├── requirements.txt
 ├── .gitignore
+
