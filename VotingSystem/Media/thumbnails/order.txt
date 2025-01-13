@@ -1,0 +1,8 @@
+Types of Images: Thumbnails for faster loading or previews.
+Recommended Formats:
+JPEG: Smaller file size is ideal for thumbnails.
+WebP: Modern and efficient format for smaller images.
+Examples:
+Preview images for competition entries.
+User profile picture thumbnails.
+Miniature versions of banners or uploads.
