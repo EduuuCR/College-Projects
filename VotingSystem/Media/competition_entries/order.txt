@@ -1,0 +1,9 @@
+Types of Images: Images submitted as entries for competitions.
+Recommended Formats:
+JPEG: Best for high-quality photographs.
+PNG: Use for graphics or illustrations.
+GIF: If you allow animations.
+Examples:
+Photos submitted for photography contests.
+Digital artwork or graphic designs.
+Animated entries (if supported).
