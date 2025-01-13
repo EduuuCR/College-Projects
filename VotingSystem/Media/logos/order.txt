@@ -1,0 +1,8 @@
+Types of Images: Logos for competitions, sponsors, or branding.
+Recommended Formats:
+SVG: Scalable for all screen sizes without losing quality.
+PNG: For transparent backgrounds.
+Examples:
+Sponsor logos.
+App logo for branding purposes.
+Icons for competition categories.
