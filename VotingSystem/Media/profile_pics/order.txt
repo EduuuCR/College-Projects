@@ -1,0 +1,7 @@
+Types of Images: User profile pictures.
+Recommended Formats:
+JPEG: Smaller size, good for general photos.
+PNG: Use for images with transparency (e.g., avatars with transparent backgrounds).
+Examples:
+User-uploaded profile photos.
+Default avatars for users who haven't uploaded a picture.
