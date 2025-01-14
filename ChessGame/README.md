@@ -19,4 +19,5 @@ A C++ Chess Game with a Graphical User Interface (GUI) and Artificial Intelligen
 ## Installation
 1. Clone the repository:
    ```bash
-  
+  git clone https://github.com/EduuuCR/ChessGame.git
+   cd ChessGame
