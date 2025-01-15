@@ -18,17 +18,14 @@ set(SOURCES
     src/gui/ChessGUI.cpp
 )
 
-# Add the header files
-set(HEADERS
-    src/chess/ChessGame.h
-    src/chess/AI.h
-    src/chess/Rules.h
-    src/chess/Utils.h
-    src/gui/ChessGUI.h
+# Include directories for headers
+include_directories(
+    src/chess
+    src/gui
 )
 
 # Add the executable target
-add_executable(ChessGame ${SOURCES} ${HEADERS})
+add_executable(ChessGame ${SOURCES})
 
 # Find SFML library
 find_package(SFML 2.5 COMPONENTS graphics window system REQUIRED)
@@ -36,9 +33,20 @@ find_package(SFML 2.5 COMPONENTS graphics window system REQUIRED)
 # Link SFML libraries to the executable
 target_link_libraries(ChessGame sfml-graphics sfml-window sfml-system)
 
-# Copy assets to the build directory (optional)
+# Set output directories
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin)
+set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/lib)
+set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/lib)
+
+# Copy assets to the build directory
+set(ASSETS_DIR ${CMAKE_SOURCE_DIR}/assets)
+
 add_custom_command(
     TARGET ChessGame POST_BUILD
     COMMAND ${CMAKE_COMMAND} -E copy_directory
-    ${CMAKE_SOURCE_DIR}/assets $<TARGET_FILE_DIR:ChessGame>/assets
+    ${ASSETS_DIR} $<TARGET_FILE_DIR:ChessGame>/assets
 )
+
+# Install rules (optional)
+install(TARGETS ChessGame DESTINATION bin)
+install(DIRECTORY ${ASSETS_DIR} DESTINATION share/ChessGame/assets)
