@@ -1,0 +1,22 @@
+[
+    {
+        "question": "What is the capital of France?",
+        "options": ["Paris", "Berlin", "Madrid", "Rome"],
+        "correctOption": 1
+    },
+    {
+        "question": "Which planet is known as the Red Planet?",
+        "options": ["Earth", "Mars", "Venus", "Jupiter"],
+        "correctOption": 2
+    },
+    {
+        "question": "Who wrote 'Hamlet'?",
+        "options": ["Charles Dickens", "Leo Tolstoy", "William Shakespeare", "Mark Twain"],
+        "correctOption": 3
+    },
+    {
+        "question": "What is the largest mammal on Earth?",
+        "options": ["Elephant", "Blue Whale", "Giraffe", "Great White Shark"],
+        "correctOption": 2
+    }
+]
