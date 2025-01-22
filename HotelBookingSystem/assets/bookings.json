@@ -1,0 +1,18 @@
+[
+    {
+        "customerName": "John Doe",
+        "room": {
+            "roomNumber": 103,
+            "price": 200.0,
+            "available": false
+        }
+    },
+    {
+        "customerName": "Jane Smith",
+        "room": {
+            "roomNumber": 105,
+            "price": 300.0,
+            "available": false
+        }
+    }
+]
