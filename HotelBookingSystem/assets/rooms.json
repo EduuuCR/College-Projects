@@ -1,0 +1,27 @@
+[
+    {
+        "roomNumber": 101,
+        "price": 150.0,
+        "available": true
+    },
+    {
+        "roomNumber": 102,
+        "price": 120.0,
+        "available": true
+    },
+    {
+        "roomNumber": 103,
+        "price": 200.0,
+        "available": false
+    },
+    {
+        "roomNumber": 104,
+        "price": 180.0,
+        "available": true
+    },
+    {
+        "roomNumber": 105,
+        "price": 300.0,
+        "available": false
+    }
+]
