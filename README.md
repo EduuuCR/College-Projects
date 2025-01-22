@@ -4,49 +4,34 @@ Project from College Works
 
 # COLLEGE PROJECTS
 
+This repository contains a collection of projects developed during my academic career. Each project was created to practice and demonstrate programming and systems development concepts learned throughout the course.
 
-Este repositório contém uma coleção de projetos desenvolvidos durante minha trajetória acadêmica. Cada projeto foi criado para praticar e demonstrar conceitos de programação e desenvolvimento de sistemas aprendidos ao longo do curso.
-
-Projetos
+Projects:
 1. ChessGame
-Descrição: Implementação de um jogo de xadrez com interface gráfica.
-Destaques: Suporte a movimentação de peças e validação de jogadas.
+- Description: Implementation of a chess game with a graphical interface, support for moving pieces and validating moves.
 2. ECommerce
-Descrição: Um sistema básico de comércio eletrônico para gerenciar produtos e pedidos.
-Destaques: Inclui operações CRUD para produtos.
+- Description: A basic e-commerce system to manage products and orders, includes CRUD operations for products.
 3. Elevator
-Descrição: Simulação do funcionamento de um elevador.
-Destaques: Implementa lógica de movimentação eficiente entre andares.
+- Description: Simulation of the operation of an elevator, implements logic for efficient movement between floors.
 4. EncryptMathPOG
-Descrição: Ferramenta de criptografia matemática para prática de programação.
-Destaques: Usa algoritmos básicos de criptografia.
+- Description: Mathematical encryption tool for programming practice, uses basic encryption algorithms.
 5. Hanoi
-Descrição: Solução para o problema das Torres de Hanói.
-Destaques: Inclui animações para os movimentos das torres.
+- Description: Solution to the Towers of Hanoi problem, includes animations for the towers' movements.
 6. HotelBookingSystem
-Descrição: Sistema de gerenciamento de reservas de hotel.
-Destaques: Funcionalidades de busca e reserva em tempo real.
+- Description: Hotel reservation management system, real-time search and reservation features.
 7. MathToolbox
-Descrição: Conjunto de ferramentas matemáticas para cálculos avançados.
-Destaques: Inclui funcionalidades como álgebra linear e cálculo.
+- Description: Set of mathematical tools for advanced calculations, includes features such as linear algebra and calculus.
 8. POG
-Descrição: Projeto de exemplo para estudar gráficos em Python.
-Destaques: Geração de gráficos interativos.
+- Description: Example project to study graphics in Python, generation of interactive graphics.
 9. QuizSystem
-Descrição: Sistema de quiz para avaliação de conhecimentos.
-Destaques: Inclui banco de questões com pontuação.
+- Description: Quiz system for knowledge assessment, includes question bank with scoring.
 10. SkinSense
-Descrição: Ferramenta para análise de imagens de pele.
-Destaques: Classificação básica de tipos de pele.
+- Description: Tool for skin image analysis, basic classification of skin types.
 11. VotingSystem
-Descrição: Sistema de votação eletrônico.
-Destaques: Registro seguro de votos.
+- Description: Electronic voting system, secure vote recording.
 12. ConvNet.ipynb
-Descrição: Implementação de uma Rede Neural Convolucional (CNN) para classificação de imagens.
-Destaques: Usa datasets para treinamento e validação.
+- Description: Implementation of a Convolutional Neural Network (CNN) for image classification, uses datasets for training and validation.
 13. Crypto_Source.ipynb
-Descrição: Projeto focado em criptografia e segurança.
-Destaques: Algoritmos de criptografia implementados do zero.
+- Description: Project focused on cryptography and security, cryptography algorithms implemented from scratch.
 14. Image_Cutter.ipynb
-Descrição: Ferramenta para corte e manipulação de imagens.
-Destaques: Suporte a múltiplos formatos de imagem.
+- Description: Tool for image cropping and manipulation, supports multiple image formats.
