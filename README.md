@@ -6,7 +6,6 @@ Project Works from College
 
 This repository contains a collection of projects developed during my academic career. Each project was created to practice and demonstrate programming and systems development concepts learned throughout the course.
 
-<i>A list of completed or ongoing college projects</i>
 
 Projects:
 1. ChessGame
