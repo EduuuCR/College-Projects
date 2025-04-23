@@ -14,8 +14,8 @@ client.on('qr', (qr) => {
 client.on('ready', async () => {
     console.log('✅ Bot está pronto!');
 
-    const groupName = 'tro'; // substitua pelo nome do grupo
-    const stickerPath = './stickers/funny.webp';
+    const groupName = 'Tcc'; // substitua pelo nome do grupo
+    const stickerPath = './stickers/adm.webp';
 
     const sticker = await MessageMedia.fromFilePath(stickerPath);
 
