@@ -29,9 +29,10 @@ client.on('ready', async () => {
 
     // Loop: envia a cada 2 segundos
     setInterval(() => {
-        client.sendMessage(group.id._serialized, sticker);
-        console.log('✅ Figurinha enviada!');
+        client.sendMessage(group.id._serialized, sticker, { sendMediaAsSticker: true });
+        console.log('✅ Figurinha enviada como sticker!');
     }, 2000); // tempo em milissegundos
 });
 
 client.initialize();
+
