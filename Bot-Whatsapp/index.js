@@ -12,10 +12,10 @@ client.on('qr', (qr) => {
 });
 
 client.on('ready', async () => {
-    console.log('✅ Bot está pronto!');
+    console.log('✅ Bot is ready!');
 
-    const groupName = 'Tcc'; // substitua pelo nome do grupo
-    const stickerPath = './stickers/adm.webp';
+    const groupName = 'Tcc'; // replace with the group name
+    const stickerPath = './stickers/adm.webp'; //replace with the sticker path
 
     const sticker = await MessageMedia.fromFilePath(stickerPath);
 
@@ -23,15 +23,15 @@ client.on('ready', async () => {
     const group = chats.find(chat => chat.isGroup && chat.name === groupName);
 
     if (!group) {
-        console.log('❌ Grupo não encontrado.');
+        console.log('❌ Group not found.');
         return;
     }
 
-    // Loop: envia a cada 2 segundos
+   // Loop: sends every x seconds
     setInterval(() => {
         client.sendMessage(group.id._serialized, sticker, { sendMediaAsSticker: true });
-        console.log('✅ Figurinha enviada como sticker!');
-    }, 2000); // tempo em milissegundos
+        console.log('✅ Sticker has been sent!');
+    }, 2000); // time in milliseconds
 });
 
 client.initialize();
