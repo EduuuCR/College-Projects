@@ -31,7 +31,7 @@ client.on('ready', async () => {
     setInterval(() => {
         client.sendMessage(group.id._serialized, sticker, { sendMediaAsSticker: true });
         console.log('✅ Sticker has been sent!');
-    }, 2000); // time in milliseconds
+    }, 1500); // time in milliseconds
 });
 
 client.initialize();
