@@ -23,4 +23,12 @@ npm install whatsapp-web.js qrcode-terminal
 node index.js
 ```
 
+**OBS: Messaging practice test**
 
+Risk Interval Observations
+```bash
+2000ms (2 seg)	-   Safe	  -   Ideal for lightweight bots
+1000ms (1 seg)	-  Moderate	-   Works well, but be careful with the volume
+500ms	     -        High	  -   Can lead to quick ban
+< 300ms    -    	Very High	-   WhatsApp may disconnect or ban you
+```
