@@ -2,7 +2,7 @@ async function runOCR(imageElement) {
   try {
     // Faz o download seguro da imagem como um blob
     const response = await fetch(imageElement.src, { mode: 'cors' });
-    
+
     if (!response.ok) {
       throw new Error(`Erro ao baixar imagem: ${response.status}`);
     }
@@ -20,11 +20,16 @@ async function runOCR(imageElement) {
       }
     );
 
-    URL.revokeObjectURL(objectURL); // Limpa o objeto criado da memória
+    URL.revokeObjectURL(objectURL); // Libera o recurso após uso
 
     return result.data.text;
   } catch (error) {
-    console.error("Erro ao fazer OCR na imagem:", error);
+    if (error.message.includes('Failed to fetch')) {
+      console.warn("A imagem pode não permitir CORS. OCR ignorado para:", imageElement.src);
+    } else {
+      console.error("Erro ao fazer OCR na imagem:", error);
+    }
     return '';
   }
 }
+
