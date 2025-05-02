@@ -1,46 +1,34 @@
-// content.js
+document.addEventListener('DOMContentLoaded', () => {
+  chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
+    if (request.action === 'translateImages') {
+      const images = document.querySelectorAll('img');
+      images.forEach(async (img, index) => {
+        try {
+          const text = await runOCR(img); // função definida em ocr.js
+          if (text.trim()) {
+            const div = document.createElement('div');
+            div.className = 'translated-text';
+            div.innerText = text;
 
-const mangaImages = document.querySelectorAll('img');
+            // posicionar div sobre a imagem
+            img.parentElement.style.position = 'relative';
+            div.style.position = 'absolute';
+            div.style.top = '0';
+            div.style.left = '0';
+            div.style.backgroundColor = 'rgba(0, 0, 0, 0.6)';
+            div.style.color = 'white';
+            div.style.padding = '4px';
+            div.style.fontSize = '14px';
+            div.style.zIndex = '9999';
+            div.style.maxWidth = '100%';
+            div.style.wordBreak = 'break-word';
 
-mangaImages.forEach(async (img, index) => {
-  try {
-    // Ignora imagens muito pequenas (como ícones)
-    if (img.naturalWidth < 100 || img.naturalHeight < 100) return;
-
-    // Cria canvas e desenha a imagem nele
-    const canvas = document.createElement('canvas');
-    canvas.width = img.naturalWidth;
-    canvas.height = img.naturalHeight;
-    const ctx = canvas.getContext('2d');
-    ctx.drawImage(img, 0, 0);
-
-    // Converte para base64
-    const base64 = canvas.toDataURL('image/png');
-
-    // Extrai texto com OCR
-    const extractedText = await extractTextFromImage(base64);
-    console.log(`Texto extraído da imagem ${index}:`, extractedText);
-
-    if (!extractedText.trim()) return;
-
-    // Traduz o texto
-    const translatedText = await translateTextToPortuguese(extractedText);
-    console.log(`Tradução da imagem ${index}:`, translatedText);
-
-    // Cria o overlay com a tradução
-    const overlay = document.createElement('div');
-    overlay.innerText = translatedText;
-    overlay.className = 'translated-overlay';
-
-    // Posiciona o overlay na mesma posição da imagem
-    const rect = img.getBoundingClientRect();
-    overlay.style.position = 'absolute';
-    overlay.style.left = `${window.scrollX + rect.left}px`;
-    overlay.style.top = `${window.scrollY + rect.top}px`;
-    overlay.style.width = `${rect.width}px`;
-
-    document.body.appendChild(overlay);
-  } catch (err) {
-    console.error(`Erro ao processar imagem ${index}:`, err);
-  }
+            img.parentElement.appendChild(div);
+          }
+        } catch (err) {
+          console.error(`Erro ao processar imagem ${index + 1}:`, err);
+        }
+      });
+    }
+  });
 });
