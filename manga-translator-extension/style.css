@@ -1,0 +1,15 @@
+/* style.css */
+
+.translated-overlay {
+  position: absolute;
+  background: rgba(0, 0, 0, 0.75);
+  color: white;
+  padding: 6px 10px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-family: Arial, sans-serif;
+  max-width: 90%;
+  z-index: 9999;
+  pointer-events: none;
+  white-space: pre-wrap;
+}
