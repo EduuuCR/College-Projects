@@ -1,3 +1,5 @@
+console.log("content.js carregado!");
+
 document.addEventListener('DOMContentLoaded', () => {
   chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
     if (request.action === 'translateImages') {
