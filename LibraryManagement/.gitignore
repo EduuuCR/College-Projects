@@ -1,0 +1,27 @@
+# Ignore class files
+*.class
+
+# Ignore generated files
+*.log
+*.tmp
+
+# Ignore build artifacts
+/build/
+/out/
+/bin/
+
+# IntelliJ IDEA
+.idea/
+*.iml
+
+# VS Code
+.vscode/
+
+# Mac system files
+.DS_Store
+
+# JSON data files (if user-specific)
+data/*.json
+
+# JAR libraries (optional)
+lib/*.jar
