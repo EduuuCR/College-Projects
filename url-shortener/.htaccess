@@ -1,0 +1,17 @@
+RewriteEngine On
+RewriteBase /url-shortener/  # Adjust this if your project is in a different subdirectory or root
+
+# Prevent direct access to these files/directories
+RewriteRule ^(database/|redirect\.php|index\.php)$ - [F,L,NC]
+
+# Rewrite existing files and directories
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+# Rewrite short codes to redirect.php
+RewriteRule ^([a-zA-Z0-9]{6})$ redirect.php?code=$1 [L,QSA]
+
+# If you want index.php to be the default when accessing the directory
+# you might not need this if DirectoryIndex index.php is already set
+RewriteCond %{REQUEST_URI} ^/url-shortener/?$
+RewriteRule ^(.*)$ index.php [L]
